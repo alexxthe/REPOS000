@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Summit Talks</h1>
+    <ul>
+        {% for talk in talks %}
+            <li>
+                <h2><a href="{% url 'summit_detail' talk.id %}">{{ talk.Summit_Title }}</a></h2>
+                <p>{{ talk.Summitor_Name }}</p>
+                <p>{{ talk.Summitor_Bio }}</p>
+                <img src="{{ talk.Summitor_Photo.url }}" alt="{{ talk.Summitor_Name }}">
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Leader Talks</h1>
+    <ul>
+        {% for talk in talks %}
+            <li>
+                <h2>{{ talk.Blog_Title }}</h2>
+                <p>{{ talk.BlogorName }}</p>
+                <p>{{ talk.PUB_DATE_TIME }}</p>
+                <div>{{ talk.Blog_TEXT }}</div>
+                <img src="{{ talk.BlogorPhoto.url }}" alt="{{ talk.BlogorName }}">
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

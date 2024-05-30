@@ -1,0 +1,70 @@
+用PYTHON及DJANGO框架，编写一个简单的静态网站。
+
+要求如下：
+
+
+-------------------------------
+DJANGO的Project名称为：World-Elite  , APP名称为：DeepDIALOG
+
+------------------------------------
+
+首页导航栏  有五个链接，分别是：Home ， Summit-Talk,Leaders-Talk ，AboutUs ，ContactUs
+
+首页是1级页面，五个链接打开后，分别是五个2级页面
+------------------
+
+Home 就是本站首页
+--------------------
+
+在项目根目录下，新建static目录，其下有3个子目录,
+一个是images，一个是summitcontent，一个是BloGGPhoto
+
+---------------------
+2级页面 Summit-Talk 点开后，是一个HTML页面，显示100条【对话】，
+
+管理员（SUPERUSER）可以在ADMIN后台发表【对话】。
+【对话】CLASS的数字段包括：Summit_Title,Summitor_Name, Summitor_Bio,Summit_Text,Summitor_Photo
+
+Summit_Title 即对话标题，PUB_DATE_TIME 是对话发表的日期和时间（这些项目均可修改）
+
+Summit_Text 字段，存储一个本地的静态链接
+在ADMIN后台发布Summit_Text内容时，只需提供一个HTML的文件链接。
+这些HTML文件从static/summitcontent目录下找。
+
+所有【对话】，可以在ADMIN后台进行“添加，删除”的功能。
+因为【对话】是链接来自既有的HTML页面，所以不需要修改【对话】。
+
+所有【对话】，在Summit-Talk页面显示时，
+显示出 Summit_Title,Summitor_Name, Summit_Bio,Summitor_Photo这几个字段的信息。
+然后，浏览读者点击Summit_Title时，再打开一个下一级的3级页面，就是已经提供的Summit_Text字段所链接的HTML页面。
+
+
+---------------------
+2级页面，Leaders-Talk 点开后，是一个HTML页面，管理员（SUPERUSER）可以在ADMIN后台发表【文章】。
+【文章】CLASS的字段包括五个：Blog_Title,BlogorName,PUB_DATE_TIME, Blog_TEXT,BlogorPhoto
+
+Blog_TEXT 是内容正文，字数不限，可以嵌入图片或音频视频
+
+所有【文章】，可以在ADMIN后台进行“添加，修改，删除”的功能
+
+
+----------------------
+AboutUs 就是单纯的内容页面，可以在admin后台修改或添加文字及图片内容
+
+图片存在static/images目录下
+----------------
+ContactUs 就是单纯的内容页面，可以在admin后台修改或添加文字及图片内容
+图片存在static/images目录下
+
+-------------------------------------
+首页请帮助做些简单美化。放置一个LOGO, 及3张大图片。
+图片存在static/images目录下
+
+-------------------------------------
+
+
+整个项目，有动态生成的内容，也有来自本地的静态内容。请在编写代码时，进行好相关配置。
+
+--------------------------
+
+
